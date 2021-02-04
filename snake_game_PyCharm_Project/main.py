@@ -7,6 +7,7 @@ import time
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")  # the background of the canvas
+screen.bgpic("bg.gif")
 screen.title("My Snake Game")
 screen.tracer(0)  # so the screen does not update until we do: screen.update
 
