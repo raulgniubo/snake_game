@@ -2,17 +2,21 @@ from turtle import Screen
 from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
+from welcome import Welcome
 import time
 
-def game():
+def canvas_setup():
     Screen().clear()
     screen = Screen()
     screen.setup(width=600, height=600)
     screen.bgcolor("black")  # the background of the canvas
     screen.bgpic("bg.gif")
-
-    screen.title("My Snake Game")
+    screen.title("RG-Snake Game")
     screen.tracer(0)  # so the screen does not update until we do: screen.update
+    return screen
+
+def game():
+    screen = canvas_setup()
 
     snake = Snake()
     food = Food()
@@ -55,5 +59,14 @@ def game():
 
     screen.exitonclick()
 
-game()
+welcome_screen = canvas_setup()
+welcome_screen.listen()
+welcome = Welcome()
+welcome_screen.onkey(game, "g")
+
+welcome_screen.exitonclick()
+
+#game()
+
+
 
