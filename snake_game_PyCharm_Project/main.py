@@ -66,7 +66,6 @@ welcome_screen.onkey(game, "g")
 
 welcome_screen.exitonclick()
 
-#game()
 
 
 

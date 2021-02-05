@@ -20,11 +20,6 @@ class Welcome(Turtle):
         self.goto(0, 140)
         self.write(f"{self.text}", align=ALIGNMENT, font=WELCOME_FONT)
 
-    # def increase_score(self):
-    #     self.score += 1
-    #     self.clear()
-    #     self.update_scoreboard()
-
     def want_to_play(self):
         self.goto(0, 0)
         self.write(f"Press 'g' to Play!!", align=ALIGNMENT, font=FONT)
