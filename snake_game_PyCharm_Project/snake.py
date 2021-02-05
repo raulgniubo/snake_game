@@ -6,7 +6,8 @@ UP = 90
 DOWN = 270
 LEFT = 180
 RIGHT = 0
-COLOR = "green"
+COLOR = "brown"
+HEAD_COLOR = "green"
 SHAPE = "circle"
 
 class Snake:
@@ -23,7 +24,10 @@ class Snake:
     def add_segment(self, position):
         new_segment = Turtle(SHAPE)
         #new_segment.shapesize(stretch_len=0.5, stretch_wid=0.5)
-        new_segment.color(COLOR)
+        if position == (0, 0):
+            new_segment.color(HEAD_COLOR)
+        else:
+            new_segment.color(COLOR)
         new_segment.penup()
         new_segment.goto(position)
         self.segments.append(new_segment)
